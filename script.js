@@ -143,7 +143,12 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  let generatedCharSelection = [];
+  for (let i = 0; i < passwordLength; i++) {
+    let randomIndex = getRandom(potentialCharacters);
+    generatedCharSelection.push(potentialCharacters[randomIndex]);
+  }
+  return generatedCharSelection.toString();
 }
 
 // Get references to the #generate element
