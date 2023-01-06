@@ -88,9 +88,52 @@ let upperCasedCharacters = [
   'Z'
 ];
 
+// Variable to store the user inputted password length
+let passwordLength = prompt("Enter a number, between 10 and 64, that you would like your password length to be?");
+
+// Checks to ensure password length is in valid range, and if not, reprompts user
+while (passwordLength < 10 || passwordLength > 64) {
+  passwordLength = prompt("Enter a number, between 10 and 64, that you would like your password length to be?");
+}
+
+// Empty array to store the user selected array options
+let passwordSelection = [];
+
+// Variables for storing boolean responses to password options
+let includeLowerCase;
+let includeUpperCase;
+let includeNumbers;
+let includeSpecialChars;
+
 // Function to prompt user for password options
 function getPasswordOptions() {
+  // Prompts user for boolean response for each option and stores input
+  includeLowerCase = confirm("Would you like lowercase letters in your password?");
+  includeUpperCase = confirm("Would you like uppercase letters in your password?");
+  includeNumbers = confirm("Would you like numbers in your password?");
+  includeSpecialChars = confirm("Would you like special characters (e.g, @, %, $) in your password?");
 
+  // The following if statements check to see if each option is true, and when it is, concatenates the corresponding array to the passwordSelection array
+  if (includeLowerCase) {
+    passwordSelection = passwordSelection.concat(lowerCasedCharacters);
+  }
+  if (includeUpperCase) {
+    passwordSelection = passwordSelection.concat(upperCasedCharacters);
+  }
+
+  if (includeNumbers) {
+    passwordSelection = passwordSelection.concat(numericCharacters);
+  }
+
+  if (includeSpecialChars) {
+    passwordSelection = passwordSelection.concat(specialCharacters);
+  }
+
+  // Checks to ensure at least one 'include' option was selected, and if not, alerts the user and calls the function to run again
+  if (passwordSelection.length === 0) {
+    alert("You must select at least ONE of the options to continue!")
+    getPasswordOptions();
+  }
 }
 
 // Function for getting a random element from an array
