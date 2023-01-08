@@ -165,5 +165,8 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// Alert the user that their choices have been registered, and how to proceed
+alert("Your selected options are stored. Click 'Generate Password' to see your password")
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
