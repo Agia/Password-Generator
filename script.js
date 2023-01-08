@@ -105,6 +105,9 @@ let includeUpperCase;
 let includeNumbers;
 let includeSpecialChars;
 
+// Call function to populate potentialCharacters array
+getPasswordOptions();
+
 // Function to prompt user for password options
 function getPasswordOptions() {
   // Prompts user for boolean response for each option and stores input
