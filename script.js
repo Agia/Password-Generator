@@ -93,7 +93,7 @@ let passwordLength = prompt("Enter a number, between 10 and 64, that you would l
 
 // Checks to ensure password length is in valid range, and if not, re-prompts user
 while (passwordLength < 10 || passwordLength > 64) {
-  passwordLength = prompt("Your number isn't in the required range. Enter a number, between 10 and 64, that you would like your password length to be?");
+  passwordLength = prompt("Your input isn't in the required range. Enter a number, between 10 and 64, that you would like your password length to be?");
 };
 
 // Empty array to store the user selected array options
