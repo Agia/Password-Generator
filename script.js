@@ -151,7 +151,7 @@ function generatePassword() {
     let randomIndex = getRandom(potentialCharacters);
     generatedCharSelection.push(potentialCharacters[randomIndex]);
   }
-  return generatedCharSelection.toString();
+  return generatedCharSelection.join("");
 }
 
 // Get references to the #generate element
