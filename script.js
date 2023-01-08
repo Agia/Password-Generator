@@ -93,8 +93,8 @@ let passwordLength = prompt("Enter a number, between 10 and 64, that you would l
 
 // Checks to ensure password length is in valid range, and if not, re-prompts user
 while (passwordLength < 10 || passwordLength > 64) {
-  passwordLength = prompt("Enter a number, between 10 and 64, that you would like your password length to be?");
-}
+  passwordLength = prompt("Your number isn't in the required range. Enter a number, between 10 and 64, that you would like your password length to be?");
+};
 
 // Empty array to store the user selected array options
 let potentialCharacters = [];
@@ -132,7 +132,7 @@ function getPasswordOptions() {
     potentialCharacters = potentialCharacters.concat(specialCharacters);
   }
 
-  // Checks to ensure at least one 'include' option was selected, and if not, alerts the user and calls the function to run again
+  // Checks to ensure at least one 'includeXCharacters' option was selected, and if not, alerts the user and calls the function to run again
   if (potentialCharacters.length === 0) {
     alert("You must select at least ONE of the options to continue!")
     getPasswordOptions();
