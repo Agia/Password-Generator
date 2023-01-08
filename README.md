@@ -12,11 +12,11 @@ Built using vanilla JavaScript, HTML and CSS.
 
  The live demo is hosted with Github Pages, and can be accessed by clicking [**here**](https://agia.github.io/Password-Generator/) (or the `View Demo` link found in the section above).
 
-![Gif showing a the program in use.](assets/pwg.gif)
+![Gif showing a the program in use.](/assets/assets/pwg.gif)
 
 ## Credits
 
-Thanks directed, in perpetuity, to the documentation found on [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/javascript), which were incredibly helpful.
+Thanks directed, in perpetuity (at least in technology terms), to the documentation found on [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/javascript), which were incredibly helpful.
 
 ## Future Development
 
